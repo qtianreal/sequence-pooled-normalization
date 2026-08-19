@@ -1,0 +1,199 @@
+{
+ "_comment": [
+  "Normalisation configurations of published sequence-labelling models,",
+  "read from official source code rather than from paper prose. 'exposed'",
+  "means the criterion of Section 3 is met: statistics computed from the",
+  "current input, along the sequence, at inference.",
+  "",
+  "Two entries were checked directly against the source by the author of",
+  "this file; the rest were compiled from a source-linked survey. Provenance is",
+  "recorded per row in 'checked' so the paper can say which is which.",
+  "",
+  "Deliberately excluded, with reasons, in _excluded below.",
+  "InstanceNorm1d on (N,C,L) pools over the time axis per channel, not over channels: verified empirically, since a consulted summary of ASFormer stated the opposite and that distinction decides whether it is exposed.",
+  "'short' is the form used in the paper's table; 'norm' keeps the full description so nothing is lost by abbreviating.",
+  "Sources are pinned to the commit that was read (resolved 2026-08-02), not to a branch, so a reader sees the same revision. Two entries named a branch that does not exist and would have 404'd: TinySleepNet: master -> main.",
+  "'cite' is the paper.bib key for the model's own publication; the 'source' URL is the code that was read, which is the evidence for the row. The two are deliberately separate, since one entry was recorded from source against what its paper's equation says."
+ ],
+ "models": [
+  {
+   "model": "MS-TCN",
+   "cite": "farha2019mstcn",
+   "domain": "action segmentation",
+   "norm": "none; the dilated residual stack has no normalisation layer",
+   "pooled_over": "---",
+   "exposed": false,
+   "checked": "source, independently",
+   "source": "https://github.com/yabufarha/ms-tcn/blob/33ed91c0c7576650a2367efc602553af4c5295b1/model.py",
+   "short": "none",
+   "commit": "33ed91c0c7576650a2367efc602553af4c5295b1",
+   "commit_date": "2021-08-16"
+  },
+  {
+   "model": "ASFormer",
+   "cite": "yi2021asformer",
+   "domain": "action segmentation",
+   "norm": "InstanceNorm1d(track_running_stats=False), inside every attention module",
+   "pooled_over": "time, per channel, over the whole input at inference",
+   "exposed": true,
+   "checked": "source, independently",
+   "source": "https://github.com/ChinaYi/ASFormer/blob/e1bbe4f3ed083748f91467c51a63ac2a8b9277ad/model.py",
+   "short": "InstanceNorm1d, no running stats",
+   "commit": "e1bbe4f3ed083748f91467c51a63ac2a8b9277ad",
+   "commit_date": "2022-02-19"
+  },
+  {
+   "model": "U-Sleep",
+   "cite": "perslev2021usleep",
+   "domain": "sleep staging",
+   "norm": "BatchNormalization (Keras)",
+   "pooled_over": "batch and time in training; frozen running statistics at evaluation",
+   "exposed": false,
+   "checked": "source, independently",
+   "source": "https://github.com/perslev/U-Time/blob/7fc4cbf79e5454661f1c0d0768886e4dfbe9d42a/utime/models/usleep.py",
+   "short": "BatchNorm, running stats at eval",
+   "commit": "7fc4cbf79e5454661f1c0d0768886e4dfbe9d42a",
+   "commit_date": "2026-06-24"
+  },
+  {
+   "model": "U-Time",
+   "cite": "perslev2019utime",
+   "domain": "sleep staging",
+   "norm": "BatchNormalization (Keras)",
+   "pooled_over": "batch and time in training; frozen running statistics at evaluation",
+   "exposed": false,
+   "checked": "source, compiled",
+   "source": "https://github.com/perslev/U-Time/blob/7fc4cbf79e5454661f1c0d0768886e4dfbe9d42a/utime/models/utime.py",
+   "short": "BatchNorm, running stats at eval",
+   "commit": "7fc4cbf79e5454661f1c0d0768886e4dfbe9d42a",
+   "commit_date": "2026-06-24"
+  },
+  {
+   "model": "DeepSleepNet",
+   "cite": "supratak2017deepsleepnet",
+   "domain": "sleep staging",
+   "norm": "batch normalisation (custom, TensorFlow)",
+   "pooled_over": "batch and time in training; frozen moving statistics at evaluation",
+   "exposed": false,
+   "checked": "source, compiled",
+   "source": "https://github.com/akaraspt/deepsleepnet/blob/eb72f9b27af54e6caa1f1bd89a285c58ebfe7779/deepsleep/nn.py",
+   "short": "BatchNorm, moving stats at eval",
+   "commit": "eb72f9b27af54e6caa1f1bd89a285c58ebfe7779",
+   "commit_date": "2024-07-19"
+  },
+  {
+   "model": "TinySleepNet",
+   "cite": "supratak2020tinysleepnet",
+   "domain": "sleep staging",
+   "norm": "batch normalisation (TensorFlow)",
+   "pooled_over": "frozen statistics at evaluation",
+   "exposed": false,
+   "checked": "source, compiled",
+   "source": "https://github.com/akaraspt/tinysleepnet/blob/70f45cff92ac0bf0a718e522bc27cca2c63ceff7/nn.py",
+   "short": "BatchNorm, frozen at eval",
+   "commit": "70f45cff92ac0bf0a718e522bc27cca2c63ceff7",
+   "commit_date": "2023-08-23"
+  },
+  {
+   "model": "SleepTransformer",
+   "cite": "phan2022sleeptransformer",
+   "domain": "sleep staging",
+   "norm": "layer normalisation over the last axis",
+   "pooled_over": "feature dimension, at each epoch independently",
+   "exposed": false,
+   "checked": "source, compiled",
+   "source": "https://github.com/pquochuy/SleepTransformer/tree/26167f26ddd8bb59ce787e56655c6e99ba446d2d",
+   "short": "LayerNorm, feature axis",
+   "commit": "26167f26ddd8bb59ce787e56655c6e99ba446d2d",
+   "commit_date": "2023-12-07"
+  },
+  {
+   "model": "SA-EEND",
+   "cite": "fujita2019eend",
+   "domain": "speaker diarization",
+   "norm": "layer normalisation over the feature dimension",
+   "pooled_over": "features, at each frame independently",
+   "exposed": false,
+   "checked": "source, compiled",
+   "source": "https://github.com/hitachi-speech/EEND/tree/b851eecd8d7a966487ed3e4ff934a1581a73cc9e",
+   "short": "LayerNorm, feature axis",
+   "commit": "b851eecd8d7a966487ed3e4ff934a1581a73cc9e",
+   "commit_date": "2021-08-30"
+  },
+  {
+   "model": "EEND-EDA",
+   "cite": "horiguchi2020eendeda",
+   "domain": "speaker diarization",
+   "norm": "layer normalisation over the feature dimension",
+   "pooled_over": "features, at each frame independently",
+   "exposed": false,
+   "checked": "source, compiled",
+   "source": "https://github.com/BUTSpeechFIT/EEND/tree/24f0deb96f505ec3a6b4f90859445f94d26aeb7f",
+   "short": "LayerNorm, feature axis",
+   "commit": "24f0deb96f505ec3a6b4f90859445f94d26aeb7f",
+   "commit_date": "2025-04-24"
+  },
+  {
+   "model": "ECAPA-TDNN",
+   "cite": "desplanques2020ecapa",
+   "domain": "speaker diarization",
+   "norm": "BatchNorm1d",
+   "pooled_over": "batch and time in training; frozen running statistics at evaluation",
+   "exposed": false,
+   "checked": "source, compiled",
+   "source": "https://github.com/speechbrain/speechbrain/blob/e5cb1f65b940634215650aa1171e0440d0808123/speechbrain/lobes/models/ECAPA_TDNN.py",
+   "short": "BatchNorm, running stats at eval",
+   "commit": "e5cb1f65b940634215650aa1171e0440d0808123",
+   "commit_date": "2026-06-15"
+  },
+  {
+   "model": "pyannote.audio SincNet frontend",
+   "cite": "bredin2020pyannote",
+   "domain": "speaker diarization",
+   "norm": "InstanceNorm1d(affine=True), track_running_stats left at its default of False",
+   "pooled_over": "time, over the whole input chunk, at inference",
+   "exposed": true,
+   "checked": "source, independently",
+   "source": "https://github.com/pyannote/pyannote-audio/blob/9a18f3a8002f86e49397666181215694bbfed108/src/pyannote/audio/models/blocks/sincnet.py",
+   "short": "InstanceNorm1d, no running stats",
+   "commit": "9a18f3a8002f86e49397666181215694bbfed108",
+   "commit_date": "2026-06-30"
+  },
+  {
+   "model": "Enformer",
+   "cite": "avsec2021effective",
+   "domain": "genomics",
+   "norm": "CrossReplicaBatchNorm with exponential moving averages in the stem, convolution tower and pointwise layers; snt.LayerNorm(axis=-1) in the transformer blocks",
+   "short": "BatchNorm, moving averages; LayerNorm, feature axis",
+   "pooled_over": "batch in training, moving averages at inference; features per token",
+   "exposed": false,
+   "checked": "source, independently",
+   "source": "https://github.com/google-deepmind/deepmind-research/blob/f5de0ede8430809180254ee957abf36ed62579ef/enformer/enformer.py",
+   "commit": "f5de0ede8430809180254ee957abf36ed62579ef",
+   "commit_date": "2023-06-02"
+  },
+  {
+   "model": "Basenji",
+   "cite": "kelley2018sequential",
+   "domain": "genomics",
+   "norm": "BatchNormalization or SyncBatchNormalization; LayerNormalization over the final axis",
+   "short": "BatchNorm, moving averages; LayerNorm, feature axis",
+   "pooled_over": "batch in training, moving averages at inference; features per position",
+   "exposed": false,
+   "checked": "source, independently",
+   "source": "https://github.com/calico/basenji/blob/06ce5d387e20b47184d05433b3983163c5f923cd/basenji/layers.py",
+   "commit": "06ce5d387e20b47184d05433b3983163c5f923cd",
+   "commit_date": "2026-01-15"
+  }
+ ],
+ "_excluded": [
+  {
+   "model": "AttnSleep",
+   "reason": "Its layer normalisation genuinely spans the time axis, but the model emits one label per 30-second input, so the axis it pools over lies inside a single labelled unit and there is no neighbouring label to reach. It meets the letter of the criterion and not its point."
+  },
+  {
+   "model": "U-Sleep input scaler",
+   "reason": "A per-recording robust scaler is fitted and applied to the whole night at load time, which is input-derived, time-pooled and active at inference. But it is one location and scale per channel per recording, so its capacity is a few numbers rather than a per-position path; a footnote at most."
+  }
+ ]
+}

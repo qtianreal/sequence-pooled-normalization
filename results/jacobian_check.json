@@ -1,0 +1,19 @@
+{
+  "channels": 4,
+  "positions": 64,
+  "set_size": 256,
+  "gln": {
+    "max_abs_error": 5.551115123125783e-16,
+    "mean_abs_offdiag": 0.004575338934948323,
+    "one_over_S": 0.00390625,
+    "row_sum_offdiag": -0.9765945882819452,
+    "diagonal": 0.9765945882819453
+  },
+  "batchnorm_eval": {
+    "max_abs_offdiag": 0.0
+  },
+  "cln": {
+    "max_abs_future": 0.0,
+    "max_abs_past": 0.3164099792953028
+  }
+}

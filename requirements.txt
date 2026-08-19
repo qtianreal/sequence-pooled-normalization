@@ -1,0 +1,17 @@
+# The versions the port was checked against. msprime's mutation and ancestry
+# streams are seed-stable within a minor version but not guaranteed across
+# them, so a differing F_ST after an upgrade is a version difference before it
+# is a bug -- re-run run_port_check.py --fst-only to tell the two apart.
+#
+# Python 3.9. Nothing here needs a newer interpreter, and the LAI environment
+# it was ported from is on 3.9, which keeps the two comparable.
+#
+#     python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+#
+# This project has its own virtualenv. It previously ran against the LAI
+# project's, which meant nothing here could be run without a second checkout
+# and pysam went undeclared because that environment happened to have it.
+msprime==1.3.4
+pysam==0.24.0    # the 1000 Genomes VCF reader in difficulty/real.py
+numpy==2.0.2
+torch==2.8.0

@@ -1,0 +1,233 @@
+[
+  {
+    "switch_prob": 2.442002442002442e-05,
+    "seed": 0,
+    "switches_per_window": 0.1015625,
+    "channels": 4,
+    "window": 4096,
+    "corr_mu_pred": 0.9269749686763518,
+    "resid_std": 0.007763908176081428,
+    "predicted_noise_std": 0.0078125,
+    "max_abs_resid": 0.024162587225437165
+  },
+  {
+    "switch_prob": 2.442002442002442e-05,
+    "seed": 1,
+    "switches_per_window": 0.095703125,
+    "channels": 4,
+    "window": 4096,
+    "corr_mu_pred": 0.9308569621185515,
+    "resid_std": 0.007734788682672027,
+    "predicted_noise_std": 0.0078125,
+    "max_abs_resid": 0.02282083172351122
+  },
+  {
+    "switch_prob": 2.442002442002442e-05,
+    "seed": 2,
+    "switches_per_window": 0.083984375,
+    "channels": 4,
+    "window": 4096,
+    "corr_mu_pred": 0.9239426684775033,
+    "resid_std": 0.00795591944488671,
+    "predicted_noise_std": 0.0078125,
+    "max_abs_resid": 0.023589429426938296
+  },
+  {
+    "switch_prob": 7.326007326007326e-05,
+    "seed": 0,
+    "switches_per_window": 0.32421875,
+    "channels": 4,
+    "window": 4096,
+    "corr_mu_pred": 0.9147354276077665,
+    "resid_std": 0.00776390846211548,
+    "predicted_noise_std": 0.0078125,
+    "max_abs_resid": 0.024162587225437165
+  },
+  {
+    "switch_prob": 7.326007326007326e-05,
+    "seed": 1,
+    "switches_per_window": 0.26171875,
+    "channels": 4,
+    "window": 4096,
+    "corr_mu_pred": 0.9242921584271133,
+    "resid_std": 0.0077347886645300346,
+    "predicted_noise_std": 0.0078125,
+    "max_abs_resid": 0.02282083172351122
+  },
+  {
+    "switch_prob": 7.326007326007326e-05,
+    "seed": 2,
+    "switches_per_window": 0.26953125,
+    "channels": 4,
+    "window": 4096,
+    "corr_mu_pred": 0.9156139952472238,
+    "resid_std": 0.007955919472272314,
+    "predicted_noise_std": 0.0078125,
+    "max_abs_resid": 0.023589425794780253
+  },
+  {
+    "switch_prob": 0.0002442002442002442,
+    "seed": 0,
+    "switches_per_window": 1.041015625,
+    "channels": 4,
+    "window": 4096,
+    "corr_mu_pred": 0.8839529534318205,
+    "resid_std": 0.007763908084320224,
+    "predicted_noise_std": 0.0078125,
+    "max_abs_resid": 0.024162576496601106
+  },
+  {
+    "switch_prob": 0.0002442002442002442,
+    "seed": 1,
+    "switches_per_window": 0.962890625,
+    "channels": 4,
+    "window": 4096,
+    "corr_mu_pred": 0.8993051308476221,
+    "resid_std": 0.007734788748825257,
+    "predicted_noise_std": 0.0078125,
+    "max_abs_resid": 0.02282082587480545
+  },
+  {
+    "switch_prob": 0.0002442002442002442,
+    "seed": 2,
+    "switches_per_window": 0.978515625,
+    "channels": 4,
+    "window": 4096,
+    "corr_mu_pred": 0.8803809399426061,
+    "resid_std": 0.007955919438217388,
+    "predicted_noise_std": 0.0078125,
+    "max_abs_resid": 0.023589422553777696
+  },
+  {
+    "switch_prob": 0.0007326007326007326,
+    "seed": 0,
+    "switches_per_window": 3.091796875,
+    "channels": 4,
+    "window": 4096,
+    "corr_mu_pred": 0.8160664865860081,
+    "resid_std": 0.007763907803159203,
+    "predicted_noise_std": 0.0078125,
+    "max_abs_resid": 0.024162577167153358
+  },
+  {
+    "switch_prob": 0.0007326007326007326,
+    "seed": 1,
+    "switches_per_window": 2.81640625,
+    "channels": 4,
+    "window": 4096,
+    "corr_mu_pred": 0.8297840676419206,
+    "resid_std": 0.00773478889465887,
+    "predicted_noise_std": 0.0078125,
+    "max_abs_resid": 0.022820824533700945
+  },
+  {
+    "switch_prob": 0.0007326007326007326,
+    "seed": 2,
+    "switches_per_window": 3.03125,
+    "channels": 4,
+    "window": 4096,
+    "corr_mu_pred": 0.7979076328936147,
+    "resid_std": 0.00795591917936205,
+    "predicted_noise_std": 0.0078125,
+    "max_abs_resid": 0.023589419797062874
+  },
+  {
+    "switch_prob": 0.0014652014652014652,
+    "seed": 0,
+    "switches_per_window": 6.111328125,
+    "channels": 4,
+    "window": 4096,
+    "corr_mu_pred": 0.7218950774632076,
+    "resid_std": 0.007763907845912426,
+    "predicted_noise_std": 0.0078125,
+    "max_abs_resid": 0.024162579253315927
+  },
+  {
+    "switch_prob": 0.0014652014652014652,
+    "seed": 1,
+    "switches_per_window": 5.8203125,
+    "channels": 4,
+    "window": 4096,
+    "corr_mu_pred": 0.7442990315790003,
+    "resid_std": 0.007734788982078179,
+    "predicted_noise_std": 0.0078125,
+    "max_abs_resid": 0.0228208190202713
+  },
+  {
+    "switch_prob": 0.0014652014652014652,
+    "seed": 2,
+    "switches_per_window": 6.0234375,
+    "channels": 4,
+    "window": 4096,
+    "corr_mu_pred": 0.7126067458533709,
+    "resid_std": 0.007955918876547525,
+    "predicted_noise_std": 0.0078125,
+    "max_abs_resid": 0.023589422926306725
+  },
+  {
+    "switch_prob": 0.002442002442002442,
+    "seed": 0,
+    "switches_per_window": 9.96484375,
+    "channels": 4,
+    "window": 4096,
+    "corr_mu_pred": 0.6464194015538471,
+    "resid_std": 0.007763908069917833,
+    "predicted_noise_std": 0.0078125,
+    "max_abs_resid": 0.024162576943635942
+  },
+  {
+    "switch_prob": 0.002442002442002442,
+    "seed": 1,
+    "switches_per_window": 9.61328125,
+    "channels": 4,
+    "window": 4096,
+    "corr_mu_pred": 0.6527089447622331,
+    "resid_std": 0.007734788996420909,
+    "predicted_noise_std": 0.0078125,
+    "max_abs_resid": 0.022820821702480315
+  },
+  {
+    "switch_prob": 0.002442002442002442,
+    "seed": 2,
+    "switches_per_window": 10.0859375,
+    "channels": 4,
+    "window": 4096,
+    "corr_mu_pred": 0.6092838422518453,
+    "resid_std": 0.0079559190186084,
+    "predicted_noise_std": 0.0078125,
+    "max_abs_resid": 0.02358942084014416
+  },
+  {
+    "switch_prob": 0.004884004884004884,
+    "seed": 0,
+    "switches_per_window": 20.00390625,
+    "channels": 4,
+    "window": 4096,
+    "corr_mu_pred": 0.49811382462141107,
+    "resid_std": 0.007763907957350697,
+    "predicted_noise_std": 0.0078125,
+    "max_abs_resid": 0.024162577465176582
+  },
+  {
+    "switch_prob": 0.004884004884004884,
+    "seed": 1,
+    "switches_per_window": 19.796875,
+    "channels": 4,
+    "window": 4096,
+    "corr_mu_pred": 0.5095999054478472,
+    "resid_std": 0.007734789034348066,
+    "predicted_noise_std": 0.0078125,
+    "max_abs_resid": 0.02282082088291645
+  },
+  {
+    "switch_prob": 0.004884004884004884,
+    "seed": 2,
+    "switches_per_window": 19.796875,
+    "channels": 4,
+    "window": 4096,
+    "corr_mu_pred": 0.4721264648744676,
+    "resid_std": 0.007955919101651986,
+    "predicted_noise_std": 0.0078125,
+    "max_abs_resid": 0.023589418828487398
+  }
+]
