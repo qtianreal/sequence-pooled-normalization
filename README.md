@@ -1,5 +1,7 @@
 # Sequence-pooled normalization and the receptive field
 
+Paper: [arXiv:2608.18576](https://arxiv.org/abs/2608.18576)
+
 Code, simulated data generators, and result files for the study of how a
 normalization layer whose statistics are pooled along the sequence supplies
 context that the convolutional receptive field is usually credited with.
@@ -15,7 +17,7 @@ the same statistics per position, multiplies what enlarging the receptive field
 is worth by up to an order of magnitude, and the same path inflates what block
 ablation attributes to a network's reach-enlarging blocks.
 
-The manuscript is under review.
+The preprint is at https://arxiv.org/abs/2608.18576. The manuscript is under review.
 
 ## Requirements
 
