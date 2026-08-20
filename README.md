@@ -169,14 +169,14 @@ is distributed by its own project under its own terms.
 If you use this code or the released results, please cite the preprint:
 
 ```bibtex
-@misc{tian2026beyond,
-  title         = {Beyond receptive fields: sequence-pooled normalization can
-                   supply most of a sequence labeler's context},
-  author        = {Tian, Qing},
-  year          = {2026},
-  eprint        = {2608.18576},
-  archivePrefix = {arXiv},
-  primaryClass  = {cs.LG},
-  url           = {https://arxiv.org/abs/2608.18576}
+@article{tian2026beyond,
+  title   = {Beyond receptive fields: sequence-pooled normalization can supply
+             most of a sequence labeler's context},
+  author  = {Tian, Qing},
+  journal = {arXiv},
+  note    = {Preprint},
+  doi     = {10.48550/arXiv.2608.18576},
+  url     = {https://arxiv.org/abs/2608.18576},
+  year    = {2026}
 }
 ```
