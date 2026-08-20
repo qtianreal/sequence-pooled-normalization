@@ -17,8 +17,6 @@ the same statistics per position, multiplies what enlarging the receptive field
 is worth by up to an order of magnitude, and the same path inflates what block
 ablation attributes to a network's reach-enlarging blocks.
 
-The preprint is at https://arxiv.org/abs/2608.18576. The manuscript is under review.
-
 ## Requirements
 
 ```
@@ -165,3 +163,20 @@ is distributed by its own project under its own terms.
   per-seed value of the quantity in question. Compared models are paired on
   data and seed.
 - The experiments total 729 trained-and-evaluated configurations.
+
+## Citation
+
+If you use this code or the released results, please cite the preprint:
+
+```bibtex
+@misc{tian2026beyond,
+  title         = {Beyond receptive fields: sequence-pooled normalization can
+                   supply most of a sequence labeler's context},
+  author        = {Tian, Qing},
+  year          = {2026},
+  eprint        = {2608.18576},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  url           = {https://arxiv.org/abs/2608.18576}
+}
+```
